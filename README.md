@@ -177,3 +177,18 @@ response = qa_chain({"query": query})
 
 print("Answer:", response["result"])
 print("\nSources:", [doc.metadata.get("source") for doc in response["source_documents"]])
+```
+
+---
+
+### 📘 Output Example:
+```
+Answer: The company provides data analytics, IoT integration, and AI consulting services.
+Sources: ['data/company_profile.pdf']
+```
+### ⚙️ How It Works
+- Load your documents
+- Split them into manageable chunks
+- Embed and store them in a vector database
+- Retrieve relevant chunks for a user’s question
+- Generate a grounded, accurate response using an LLM
